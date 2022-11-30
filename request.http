@@ -1,0 +1,77 @@
+### create user
+POST http://localhost:5000/users/create
+content-type: application/json
+
+{
+    "mobile" : 1234567890,
+    "age"  : 20,
+    "email"   : "test111@mail.com",
+    "name"   : "test123",
+    "address" : "some address"
+}
+
+
+### update user details
+PUT http://localhost:5000/users/update/4
+content-type: application/json
+
+{
+    "age"  : 21
+}
+
+### add new hotel 
+POST http://localhost:5000/hotels/add
+content-type: application/json
+
+{
+    "type" : "3 star",
+    "name"   : "test123",
+    "address" : "some address"
+}
+
+
+### update hotel details
+PUT http://localhost:5000/hotels/edit/1
+content-type: application/json
+
+{
+    "type"  : "4 star",
+    "address" : "some address new"
+}
+
+### add room in hotel 
+POST http://localhost:5000/rooms/add
+content-type: application/json
+
+
+{
+    "type" : "suite",
+    "room_no"   : "A-101",
+    "room_rent" : 100,
+    "avaliable" : true,
+    "hotel_id" : 1
+
+}
+
+
+### update hotel details
+PUT http://localhost:5000/rooms/edit/1
+content-type: application/json
+
+{
+    "type" : "suite",
+    "room_rent" : 10,
+    "avaliable" : false
+}
+
+
+### book the room
+POST http://localhost:5000/room/book
+content-type: application/json
+
+{
+    "hotel_name" : "test123",
+    "room_no" : "A-101",
+    "user_id" : 4
+ }
+
